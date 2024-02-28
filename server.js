@@ -26,7 +26,7 @@ app.post("/items", (req, res) => {
 // Обработчик PATCH запроса для изменения свойств элемента по его идентификатору
 app.patch("/items/:id", (req, res) => {
   const { id } = req.params;
-  const foundItem = items.find((item) => item.id === +id);
+  const foundItem = items.find((item) => item.id === id);
 
   if (!foundItem) {
     return res.status(404).json({ message: "Элемент не найден" });
@@ -39,7 +39,7 @@ app.patch("/items/:id", (req, res) => {
 // Обработчик DELETE запроса для удаления элемента по его идентификатору
 app.delete("/items/:id", (req, res) => {
   const { id } = req.params;
-  items = items.filter((item) => item.id !== +id);
+  items = items.filter((item) => item.id !== id);
   res.sendStatus(204); // Возвращаем статус 204 No Content
 });
 

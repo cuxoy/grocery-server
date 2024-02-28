@@ -7,8 +7,8 @@ app.use(cors()); // Включаем обработку CORS
 
 // Пример начальных данных
 let items = [
-  { id: 1, name: "Молоко", isBought: false, price: 2.5 },
-  { id: 2, name: "Хлеб", isBought: false, price: 1.0 },
+  { id: "1", name: "Молоко", isBought: false, price: 2.5 },
+  { id: "2", name: "Хлеб", isBought: false, price: 1.0 },
 ];
 
 // Обработчик GET запроса для получения списка элементов
